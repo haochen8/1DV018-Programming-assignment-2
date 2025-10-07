@@ -1,6 +1,4 @@
-package org;
-
-import Hashing.HashTable;
+package Hashing;
 
 public class HashTableSmoke {
   public static void main(String[] args) {

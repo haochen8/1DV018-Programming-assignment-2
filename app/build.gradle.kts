@@ -33,8 +33,9 @@ java {
 }
 
 application {
-    // Define the main class for the application.
-    mainClass = "org.App"
+    mainClass.set(
+        providers.gradleProperty("mainClass").orElse("org.App")
+    )
 }
 
 tasks.named<Test>("test") {

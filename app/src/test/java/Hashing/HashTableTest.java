@@ -22,8 +22,8 @@ class HashTableTest {
     assertEquals(1, ht.get("a"));
     assertTrue(ht.containsKey("a"));
 
-    assertEquals(1, ht.put("a", 9)); // return old
-    assertEquals(1, ht.size()); // size unchanged on overwrite
+    assertEquals(1, ht.put("a", 9));
+    assertEquals(1, ht.size());
     assertEquals(9, ht.get("a"));
   }
 
@@ -53,7 +53,6 @@ class HashTableTest {
       assertEquals(-i, ht.get(i));
     }
 
-    // Rimlig lastfaktor efter rehash (inte ett hårt krav, mest sanity)
     assertTrue(ht.currentLoadFactor() <= 0.90);
   }
 
@@ -76,7 +75,7 @@ class HashTableTest {
     @Override
     public int hashCode() {
       return 1;
-    } // alla i samma bucket
+    }
 
     @Override
     public boolean equals(Object o) {
