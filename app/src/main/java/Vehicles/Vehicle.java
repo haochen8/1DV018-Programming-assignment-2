@@ -2,6 +2,9 @@ package Vehicles;
 
 import java.util.regex.Pattern;
 
+/**
+ * Provides registration number of Vehicles and hash code method
+ */
 public class Vehicle {
   private static final Pattern VALID_PLATE = Pattern.compile("^[A-ZÅÄÖ]{3}[0-9]{2}[A-Z0-9]$|^[A-ZÅÄÖ]{3}[0-9]{3}$");
 
